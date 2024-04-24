@@ -1,0 +1,6 @@
+#Tue, 23 Apr 2024 21:10:34 -0300
+
+info.app.version=0.1
+info.app.name=Mini_Asaas
+grails.env=development
+info.app.grailsVersion=5.0.1
