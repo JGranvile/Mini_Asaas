@@ -1,6 +1,6 @@
-#Tue, 23 Apr 2024 21:38:05 -0300
+#Wed, 24 Apr 2024 18:38:57 -0300
 
 info.app.version=0.1
 info.app.name=Mini_Asaas
-grails.env=production
+grails.env=development
 info.app.grailsVersion=5.0.1
