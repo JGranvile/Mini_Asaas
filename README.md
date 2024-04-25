@@ -1,2 +1,3 @@
 # Mini_Asaas
-Repositório para atividades do asaas
+Nesse repositório criaremos o projeto do estágio referente a uma mini aplicação similar ao Asaas. 
+
