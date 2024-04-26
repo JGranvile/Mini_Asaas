@@ -4,6 +4,9 @@
     <meta name="layout" content="">
     <title>Formulário de Cadastro</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         /* Estilos para a caixa colorida */
         .background-box {
             background-color: #0030b9; /* Cor de fundo da caixa */
@@ -52,13 +55,52 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        @media screen and (max-width: 600px) {
+        .campo {
+            width: 100%;
+        }
+        }
+
+        /* Estilos para telas maiores */
+        @media screen and (min-width: 601px) {
+        .campo {
+            width: 400px;
+        }
+        }
+        @media screen and (max-width: 600px) {
+        .form-field {
+            font-size: 14px;
+        }
+        }
+
+        /* Estilos para telas maiores */
+        @media screen and (min-width: 601px) {
+        .form-field {
+            font-size: 16px;
+        }
+        }
+        /* Estilos para telas menores */
+        @media screen and (max-width: 600px) {
+        .form-field {
+            margin-bottom: 10px;
+        }
+        }
+
     </style>
+
 </head>
 <body>
     <div class="background-box"> 
+
         <g:form name="Cadastro" controller="cadastro" action="save" >
             <img src="${resource(dir: 'images', file: 'logo.png')}" alt="Logo" style="width: 50%; height: auto;">
+            <g:if test="${flash.message}">
+                <h1>${flash.message}</h1>
+            </g:if>
+
             <h1 style= "color: #f1f5fb"> Formulário de Cadastro </h1>
+            
             <label for="nome">Nome:</label><br>
             <g:textField name="nome" class="form-field"/><br>
             
@@ -91,8 +133,9 @@
             
             <input type="submit" value="Enviar">
         </g:form>
+        
     </div>
-
+    
     <script>
     function fillAddress() {
         var cep = document.getElementsByName('cep')[0].value;
